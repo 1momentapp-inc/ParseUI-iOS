@@ -19,7 +19,8 @@ Pod::Spec.new do |s|
                                ParseUI/Generated/PFResources
                           CMD
   s.source_files        = "ParseUI/**/*.{h,m}"
-  s.public_header_files = 'ParseUI/Classes/LogInViewController/*.h',
+  s.public_header_files = 'ParseUI/Classes/Internal/PFImageCache.h',
+						  'ParseUI/Classes/LogInViewController/*.h',
                           'ParseUI/Classes/SignUpViewController/*.h',
                           'ParseUI/Classes/QueryTableViewController/*.h',
                           'ParseUI/Classes/QueryCollectionViewController/*.h',

@@ -20,6 +20,7 @@
  */
 
 #import <ParseUI/PFCollectionViewCell.h>
+#import <ParseUI/PFImageCache.h>
 #import <ParseUI/PFImageView.h>
 #import <ParseUI/PFLogInView.h>
 #import <ParseUI/PFLogInViewController.h>
