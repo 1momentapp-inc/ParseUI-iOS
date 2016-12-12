@@ -477,10 +477,7 @@
 
 // Whether we need to show the pagination cell
 - (BOOL)_shouldShowPaginationCell {
-    return (self.paginationEnabled &&
-            !self.editing &&
-            [self.objects count] != 0 &&
-            (_lastLoadCount == -1 || _lastLoadCount >= (NSInteger)self.objectsPerPage));
+	return NO;  // no pagination cells
 }
 
 // Selectively refresh pagination cell
