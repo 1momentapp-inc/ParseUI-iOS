@@ -46,14 +46,11 @@
 @end
 
 @interface PFQueryTableViewController () {
-    NSMutableArray<PFObject *> *_mutableObjects;
-
-    BOOL _firstLoad;           // Whether we have loaded the first set of objects
-    NSInteger _currentPage;    // The last page that was loaded
-    NSInteger _lastLoadCount;  // The count of objects from the last load.
     // Set to -1 when objects haven't loaded, or there was an error.
     UITableViewCellSeparatorStyle _savedSeparatorStyle;
 }
+
+@property (nullable, atomic) NSMutableArray<__kindof PFObject *> *mutableObjects;
 
 @property (nonatomic, strong) PFLoadingView *loadingView;
 

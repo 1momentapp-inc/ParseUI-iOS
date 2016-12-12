@@ -149,7 +149,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  The array of instances of `PFObject` that is used as a data source.
  */
-@property (nullable, nonatomic, copy, readonly) NSArray<__kindof PFObject *> *objects;
+- (NSMutableArray<__kindof PFObject *> *)objects;
 
 /**
  Returns an object at a particular indexPath.
@@ -210,6 +210,21 @@ NS_ASSUME_NONNULL_BEGIN
  Loads the next page of objects, appends to table, and refreshes.
  */
 - (void)loadNextPage;
+
+/**
+ Whether we have loaded the first set of objects.
+ */
+@property (nonatomic, assign, readonly) BOOL firstLoad;
+
+/**
+ The last page that was loaded.
+ */
+@property (nonatomic, assign, readonly) NSInteger currentPage;
+
+/**
+ The count of objects from the last load.
+ */
+@property (nonatomic, assign, readonly) NSInteger lastLoadCount;
 
 ///--------------------------------------
 /// @name Querying
