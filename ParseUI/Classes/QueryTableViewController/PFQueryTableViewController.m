@@ -247,7 +247,7 @@
             }
 
             [_mutableObjects addObjectsFromArray:foundObjects];
-            [self.tableView reloadData];
+//            [self.tableView reloadData]; // unwanted side effect, subclass should handle if needed
         }
 
         [self objectsDidLoad:error];
